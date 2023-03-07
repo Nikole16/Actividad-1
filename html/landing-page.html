@@ -5,8 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/styles/style-landing-page.css">
-    <!--FONT AWESOME  -->
+    <!--FONT AWESOME-->
     <script src="https://kit.fontawesome.com/bf4c834fcf.js" crossorigin="anonymous"></script>
+    <!--FONT FAMILY  -->
+    <link href="https://fonts.googleapis.com/css2?family=Irish+Grover&display=swap" rel="stylesheet">
     <title>Landing Page</title>
 </head>
 <body>
@@ -14,25 +16,48 @@
         <nav class="header-options">
             <div class="logo"></div>
             <ul class = "links">
-                <li><i class="fa-solid fa-venus"></i><a href="#">Nike</a></li>
-                <li><a href="#">Men</a></li>
-                <li><a href="#">Women</a></li>
+                <li><a href="#">Nike</a></li>
+                <li><i class="fa-solid fa-mars on"></i>
+                    <a href="#"><span class="off">Men</span></a></li>
+                <li><i class="fa-solid fa-venus on"></i>
+                    <a href="#">
+                        <span class="off">Women</span>
+                    </a></li>
                 <li><a href="#">Running</a></li>
             </ul>
             <ul class="links-registration">
-                <li><a href="#" >Registration</a></li>
+                <li><i class="fa-sharp fa-solid fa-address-card on"></i>
+                    <a href="#">
+                    <span class="off">Registration</span>
+                    </a></li>
                 <li><a href="#">Nike</a></li>
             </ul>
         </nav>
         <div class="header-container">
             <h1>The better shop</h1>
             <div class="search-container">
-                <input type="text" class="search">
+               
+                <input type="text" class="search" >
             </div>
         </div>
     </header>
-    <section class="imgTeni"></section>
-    <section class="info"></section>
+
+    <div class="img-container">
+        <img src="/img/Teni.png" alt="tenni">
+    </div>
+    <section class="info">
+        <div class="teni-information">
+            <div class="price-description">
+                <h3>Price <span>$500</span></h3>
+                <h4>Description</h4>
+                <p>Shoes with the most popular</p>
+            </div>
+            <div class="buy-section">
+                <p>Nike<span>Fashion</span></p>
+                <input type="button" name="" id="" class="buy-button">Buy
+            </div>
+        </div>
+    </section>
     <footer></footer>
 </body>
 </html>
