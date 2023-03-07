@@ -1,14 +1,22 @@
+*{
+    color: white;
+    font-family: 'Athiti', sans-serif;
+}
 body{
     margin: 0;
     padding: 0;
     background: #00B3BE;
-    height: 100vh;
+    
 }
+.top-help-options,.option-links,.body-container,.body-right-form,.form-container,.form-help-options
+, .form-shape-container,.form-help-options ul,.box-shadows,.left-components, form{
+    background: transparent;
+    display: flex;
+}
+
 .top-help-options{
     height: 15%;
     width: 100%;
-    background: transparent;
-    display: flex;
     align-items: center;
     justify-content: center;
     list-style: none;
@@ -19,18 +27,18 @@ body{
     width: 70px;
     background: white;
     margin-left: 20px;
-    border-radius: 50px;
-    
+    border-radius: 50px; 
 }
 .option-links{
-    display: flex;
     justify-content: right;
     list-style: none;
-    color: white;
     font-size: 20px;
     flex-grow: 2;
-    background: transparent;
     gap: 50px;
+}
+
+.option-links a{
+    text-decoration: none;
 }
 .text-box{
     background: white;
@@ -40,23 +48,18 @@ body{
     border-radius: 45px;
 }
 .body-container{
-    display: flex;
-    background: transparent;
     width: 100%;
-    height: 90%;
+    height: 100%;
 }
-.body-left-components{
+.left-components{
+    flex-direction: column;
+    z-index: 1;
+}
+.left-components,.body-right-form{
     width: 50%;
     height: 100%;
-    background: transparent;
 }
-    .left-container{
-        display: flex;
-        flex-direction: column;
-        margin-top: 7rem;
-    }
-    .text-titles{
-        color: white;
+    .text-titles,.left-components label,button{
         margin-left: 3rem;
     }
     .text-titles h1{
@@ -65,35 +68,49 @@ body{
     .text-titles h4{
         font-size: 2rem;
     }
-    .register-button{
-        width: 12rem;
-        height: 3rem;
+    .button{
+        width: 15rem;
+        height: 4rem;
         background: rgb(44, 132, 132,1);
         border: solid 0.3rem #A4E9E5;
         border-radius: 30px;
-        color:white
+        font-size: 25px;
+        z-index: 2;
     }
-    .left-container label,
-    .left-container button{
-        margin-left: 3rem;
+
+    .register{
+        margin-top: 10rem;
+        margin-left: 4rem;
+    }
+
+    .products{
+        position: relative;
+        z-index: 1;
+    }
+
+    .products::before{
+        content:'';
+        width: 100%;
+        height: 110%;
+        border-radius: 40px;
+        border: 0.3rem solid white;
+        top: -6px;
+        left: 60%;
+        position: absolute;
+        z-index: -1;
     }
 
 
 
 .body-right-form{
-    width: 50%;
-    height: 100%;
-    background: transparent;
-    display: flex;
     justify-content: center;
 }
     .form-container{
-        display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         height: 65%;
-        width: 65%;
+        width: 70%;
         margin-top: 3rem;
         background: #FCFCFC;
         border-radius: 3rem;
@@ -101,7 +118,6 @@ body{
     }
 
         form{
-            display: flex;
             flex-direction: column;
             justify-content: center;
             gap: 1rem;
@@ -110,20 +126,26 @@ body{
             width: 100%;
             margin-top: 1rem;
         }
+        form label,p,input{
+            color: black;
+            font-weight: 400;
+            font-size:25px ;
+        }
         form label{
             padding: 0 2rem 0 2rem;
         }
         form input{
             border: none;
             border-bottom: 1px solid black;
-            width: 90%;
+            width: 85%;
             margin-left: 15px;
+            height: 2rem;
+            font-size: 25px;
         }
         form input:focus{
             outline: 0;
         }
     .form-shape-container{
-        display: flex;
         justify-content: center;
         align-items: center;
         width: 100%;
@@ -141,7 +163,6 @@ body{
         }
 
         .form-help-options{
-            display: flex;
             justify-content: center;
             align-items: center;
             background: #00B3BE;
@@ -150,13 +171,11 @@ body{
             border-radius: 0 0 30px 30px;
         }
     .form-help-options ul{
-        display: flex;
         justify-content: center;
         align-items: center;
         width: 100%;
         height: 100%;
         font-size: 20px;
-        color: #FCFCFC;
         list-style: none;
         gap: 70px; 
     }
@@ -167,16 +186,13 @@ body{
         border-radius: 30px;
         margin:auto;
         border: none;
-        color: white
     }
 
     .box-shadows{
-        display: flex;
         justify-content: center;
         align-items: center;
         width: 100%;
-        height: 12.5%;
-        background: transparent;
+        height: 2rem;
         gap: 2rem;
     }
         .box-shadows div{
@@ -185,5 +201,18 @@ body{
             height: 60%;
             border-radius: 30px;
         }
-
+ 
+@media all and (max-width:1400px){
+    .form-container{
+    width: 80%;
+    }
+}
+@media all and (max-width:1000px){
+    .body-container{
+        flex-direction: column;
+    }
+    .left-components,.body-right-form{
+        width: 100%;
+    }
+}
     
