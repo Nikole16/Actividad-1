@@ -110,14 +110,14 @@ header{
 }
 .teni-information{
     display: flex;
-    overflow: hidden;
-    justify-content: space-between;
+    padding-right: 5rem;
     width: 100%;
 }
 .price{
     margin-left: 35px;
     font-size: 35px;
     color: white;
+    flex-grow: 2;
     font-family: 'Irish Grover', cursive;
     float: left;
 }
@@ -127,6 +127,7 @@ header{
     color: white;
     margin-right: 10px;
     justify-items: center;
+    z-index: 1;
 }
 #nike-fashion{
     margin-left: 165px;
@@ -134,12 +135,37 @@ header{
 #buy-button{
     border-radius: 3rem;
     height: 3em;
-    min-width: 250px;
-    width: 20%;
-    border-color: white;
+    min-width: 100px;
+    width: 80%;
+    border: none;
     font-size: 20px;
-    box-shadow: 8px 10px 10px 1px rgba(0,0,0,0.5);
+    box-shadow: 8px 10px 10px 1px rgba(0,0,0,0.7);
+    position: relative;
+    
 }
+
+#buy-button::after, #buy-button::before{
+    content: "";
+    position: absolute;
+    height: 90%;
+    width: 20%;
+    border: 0.4rem solid white;
+    border-radius: 100%;
+    z-index: -1;
+}
+#buy-button::after{
+    top: -20%;
+    right: -15%;
+}
+
+#buy-button::before{
+    top: 0;
+    right: -10%;
+    height: 70%;
+    width: 15%;
+}
+
+
 .links a, .links-registration a{
     text-decoration: none;
     text-transform: uppercase;
@@ -152,17 +178,19 @@ header{
     justify-content: space-evenly;
     margin-top: 100px;
     flex-wrap: wrap;
+    gap: 2rem;
 }
 .frame{
     display: flex;
     flex-direction: column;
     width: 21%;
-    height: 400px;
+    height: 350px;
     background: white;
     border-radius: 50px;
     align-items: center;
     margin-bottom: 10px;
     min-width: 300px;
+    
 }
 .price-frame{
     font-size: 45px;
