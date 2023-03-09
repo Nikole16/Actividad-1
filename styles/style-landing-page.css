@@ -190,7 +190,7 @@ header{
     align-items: center;
     margin-bottom: 10px;
     min-width: 300px;
-    
+    justify-content: center;
 }
 .price-frame{
     font-size: 45px;
