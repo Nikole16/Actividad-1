@@ -141,7 +141,6 @@ header{
     font-size: 20px;
     box-shadow: 8px 10px 10px 1px rgba(0,0,0,0.7);
     position: relative;
-    
 }
 
 #buy-button::after, #buy-button::before{
@@ -210,14 +209,45 @@ h3{
     text-transform: capitalize;
 }
 
+.frame h3{
+    color: black;
+    font-size: 20px;
+}
 
-.on{
+li a .ocultar{
     display: none;
 }
 
 @media all and (max-width:650px) {
-    .off{display: none;}
-    .on{display: block;} 
+    li a span{display: none;}
+    li a .ocultar{display: block;} 
+    .teni-information{
+        flex-direction: column;
+        justify-content: center;
+    }
+    .price,.buy-section{
+        margin: 0%;
+        justify-content: center;
+    }
+    #buy-button{
+        margin-left: 20%;
+    }
+
+    .frame{
+        height: 12rem;
+        flex-direction: row;
+        padding: auto;
+        width: 60%;
+    }
+    .frame h2{
+        font-size: 30px;
+    }
+
+    .frame img{
+        z-index: 1;
+        width: 70%;
+        height: 80%;
+    }
 }
 
 @media all and (max-width:900px){
@@ -228,27 +258,7 @@ h3{
         width: 70%;
     }
 }
-@media all and (max-width:600px){
 
-    .teni-information{
-        flex-direction: column;
-        justify-content: center;
-    }
-    .price{
-
-        margin: 0%;
-        justify-content: center;
-       
-    }
-    .buy-section{
-        margin: 0%;
-        justify-items: center;
-    }
-    #buy-button{
-        margin-left: 20%;
-
-    }
-}
 
 
 
