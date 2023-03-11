@@ -3,37 +3,37 @@
     font-family: 'Athiti', sans-serif;
 }
 body{
-    margin: 0;
-    padding: 0;
+    padding: 0 1.5rem;
     background: #00B3BE;   
 }
 
-a{
-    text-decoration: none;
-}
+html{ font-size: 16px; }
+
+a{text-decoration: none;}
 
 h1{
     font-family: 'Mukta', sans-serif;
     font-weight: 800;
 }
 .top-help-options,.option-links,.body-container,.body-right-form,.form-container,.form-help-options
-, .form-shape-container,.form-help-options ul,.box-shadows,.left-components, form, .button{
+, .form-shape-container,.form-help-options ul,.box-shadows,.left-components, form, .button, .shape, .header-box,
+.botones{
     background: transparent;
     display: flex;
+}
+
+.top-help-options, .header-box, .button, .form-container,.form-shape-container, .form-help-options ul{
+    align-items: center;
+    justify-content: center;
 }
 
 .top-help-options{
     height: 15%;
     width: 100%;
-    align-items: center;
-    justify-content: center;
     list-style: none;
     gap: 2rem;
 }
 .header-box{
-    display: flex;
-    justify-content: center;
-    align-items: center;
     gap: 2rem;
     flex-grow: 2;
 }
@@ -41,235 +41,217 @@ h1{
     height: 6.5rem;
     width: 6.5rem;
     background: url("/img/Logo.png");
+    background-size: cover;
     filter: contrast(1.5);
-    margin-left: 3em;
-    margin-top: 2em;
     border-radius: 50px;
-    
 }
 .option-links{
     justify-content: right;
     list-style: none;
-    font-size: 20px;
+    font-size: 1.5rem;
     flex-grow: 2;
-    gap: 50px;
+    gap: 2rem;
 }
 
-.option-links a{
-    text-decoration: none;
-}
+.option-links a{ text-decoration: none;}
+
 .text-box{
     background: white;
-    width: 200px;
+    width: 13.5rem;
     height: 40px;
-    margin-right: 20px;
     border-radius: 45px;
 }
-.body-container{
-    width: 100%;
-    height: 100%;
-}
-.left-components{
-    flex-direction: column;
-}
-.left-components,.body-right-form{
+.left-components{flex-direction: column;} 
+
+.left-components,.body-right-form, .body-container{
     width: 50%;
     height: 100%;
 }
-    .text-titles,.left-components label,button{
-        margin-left: 3rem;
-        z-index: 1;
-    }
-    .text-titles h1{
-        font-size: 5rem;
-    }
-    .text-titles h4{
-        font-size: 2rem;
-    }
-    .button{
-        width: 15rem;
-        height: 4rem;
-        border: solid 0.3rem #A4E9E5;
-        border-radius: 3rem;
-        font-size: 25px;    
-        justify-content: center;
-        align-items: center;
-        margin-left: 2rem;
-    }
+.body-container{ width: 100%; }
 
-    .register{
-        margin-top: 10rem;
-        margin-left: 4rem;
-        background: radial-gradient(#12A1AA,#21292ba9,#21292b);
-    }
+.text-titles h1{ font-size: 5rem;}
 
-    .products{
-        position: relative;
-        background: linear-gradient(65deg,#12A1AA,#999c9d);
-        border-color: aqua;
-    }
+.text-titles h4{font-size: 2rem;}
 
-    .products::before,.products::after{
-        content:'';
-        position: absolute;
-        z-index: -1;
-        width: 100%;
-        height: 105%;
-        border-radius: 40px;
-        border: 0.3rem solid white;
-        top: -5px;
-        left: 60%;
-    }
-
-    .products::after{
-        border-color: black;
-        z-index: -2;
-        left: 58%;
-        top: 0;
-        filter: blur(2px);
-    }
-
-.body-right-form{
-    justify-content: center;
+.button{
+    width: 15rem;
+    height: 4rem;
+    border: solid 0.3rem #A4E9E5;
+    border-radius: 3rem;
+    font-size: 2rem;    
+    margin-left: 2rem;
 }
-    .form-container{
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        height: 65%;
-        width: 70%;
-        margin-top: 3rem;
-        background: #FCFCFC;
-        border-radius: 3rem;
-        box-shadow:  0 10px 10px 10px rgba(0,0,0,0.4)
-    }
 
-        form{
-            flex-direction: column;
-            justify-content: center;
-            gap: 1rem;
-            align-items: flex-start;
-            height: 75%;
-            width: 100%;
-            margin-top: 1rem;
-        }
-        form label,p,input{
-            color: black;
-            font-weight: 400;
-            font-size:25px ;
-        }
-        form label{
-            padding: 0 2rem 0 2rem;
-        }
-        form input{
-            border: none;
-            border-bottom: 1px solid black;
-            width: 85%;
-            margin-left: 15px;
-            height: 2rem;
-            font-size: 25px;
-        }
-        form input:focus{
-            outline: 0;
-        }
-    .form-shape-container{
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-    }
-        .form-shape-container label{
-            font-size: 20px;
-            flex-grow: 2;
-        }
-        .form-shape{
-            position: relative;
-            width: 4rem;
-            height: 4rem;
-            background: #00B3BE;
-            border-radius:60%;
-            margin-right: 25px;
-        }
-        .form-shape::after{
-            position: absolute;
-            content: "";
-            width: 50%;
-            height: 50%;
-            background: white;
-            border-radius: 50%;
-            top: 0.4rem;
-            left: 0.4rem;
-        }
+.register{
+    margin-top: 10rem;
+    margin-left: 4rem;
+    background: radial-gradient(#12A1AA,#21292ba9,#21292b);
+}
 
-        .form-help-options{
-            justify-content: center;
-            align-items: center;
-            background: #00B3BE;
-            height: 12.5%;
-            width: 100%;
-            border-radius: 0 0 30px 30px;
-        }
-    .form-help-options ul{
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        height: 100%;
-        font-size: 20px;
-        list-style: none;
-        gap: 70px; 
-    }
-    .btnConfirm{
-        background: #12A1AA;
-        width: 90%;
-        height: 2.5rem;
-        border-radius: 30px;
-        margin:auto;
-        border: none;
-        font-size: 1.5rem;
-        text-align: center;
-    }
+.products{
+    position: relative;
+    background: linear-gradient(65deg,#12A1AA,#999c9d);
+    border-color: aqua;
+    transition: .2s  ease all;
+}
 
-    .box-shadows{
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        height: 2rem;
-        gap: 2rem;
-    }
-        .box-shadows div{
-            background: #D9D9D9;
-            width: 30%;
-            height: 60%;
-            border-radius: 30px;
-        }
+.products::before,.products::after{
+    content:'';
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 105%;
+    border-radius: 40px;
+    border: 0.3rem solid white;
+    top: -5px;
+    left: 60%;
+    transition: .2s  ease all;
+}
+
+.products::after{
+    border-color: black;
+    z-index: -2;
+    left: 58%;
+    top: 0;
+    filter: blur(2px);
+}
+
+.body-right-form{justify-content: center;}
+
+.form-container{
+    flex-direction: column;
+    height: 65%;
+    width: 70%;
+    margin-top: 3rem;
+    background: #FCFCFC;
+    border-radius: 3rem;
+    box-shadow:  0 10px 10px 10px rgba(0,0,0,0.4)
+}
+
+form{
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-start;
+    height: 75%;
+    width: 90%;
+    margin-top: 1rem;
+}
+form label,p,input{
+    color: black;
+    font-weight: 400;
+    font-size:1.5rem;
+}
+form input{
+    border: none;
+    border-bottom: 1px solid black;
+    width: 85%;
+    height: 2rem;
+}
+form input:focus{ outline: 0;}
+
+.form-shape-container{
+    justify-content: space-evenly;
+    width: 100%;
+}
+.form-shape-container label{
+    font-size: 1.6rem;
+}
+.shape{
+    width: 100%;
+    justify-content: space-between;
+}
+.form-shape{
+    position: relative;
+    width: 4rem;
+    height: 4rem;
+    background: #00B3BE;
+    border-radius:60%;
+    transition: .2s  ease all;
+}
+.form-shape::after{
+    position: absolute;
+    content: "";
+    width: 50%;
+    height: 50%;
+    background: white;
+    border-radius: 50%;
+    top: 0.4rem;
+    left: 0.4rem;
+    transition: .2s  ease all;
+}
+
+.form-help-options{
+    background: #00B3BE;
+    height: 12.5%;
+    width: 100%;
+    border-radius: 0 0 30px 30px;
+}
+.form-help-options ul{
+    justify-content: space-evenly;
+    flex-grow: 1;
+    font-size: 1.5rem;
+    list-style: none;
+}
+.btnConfirm{
+    background: #12A1AA;
+    width: 90%;
+    height: 2.5rem;
+    border-radius: 30px;
+    margin:auto;
+    border: none;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.box-shadows{
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: 2rem;
+}
+.box-shadows div{
+    background: #D9D9D9;
+    width: 30%;
+    height: 60%;
+    border-radius: 30px;
+}
+
+.products:hover::after{left: 0;}
+
+.products:hover::before{left: 0;}
+
+.btnConfirm:hover{background-color:  #1c4144;}
+
+.botones{flex-direction: column;}
  
-a .ocultar-mostrar{
-    display: none;
-}
-@media all and (max-width:1400px){
-    .form-container{
-    width: 80%;
-    }
-}
+a .ocultar-mostrar{display: none;}
+ 
+@media all and (max-width:1400px){ .form-container{width: 90%;} }
+
 @media all and (max-width:1000px){
-    .body-container{
-        flex-direction: column;
-    }
+
+    .body-container{flex-direction: column;}
+
     .left-components,.body-right-form{
         width: 100%;
         align-items: center;
     }
-    .button{
-        margin-left: 0;
+    .button{ margin-left: 0;}
+
+    .products::after, .products::before{ left: 0;}
+
+    .botones{
+        gap: 6rem;
+        flex-direction: row;
     }
-    .products::after, .products::before{
-        left: 15%;
-    }
-    a .ocultar-mostrar{
-        display:block;
-    }
-    a span{
-        display:none;
-    } 
+
+    .botones .register{margin-top: 0;}
+
+    a .ocultar-mostrar{display:block;}
+
+    a span{ display:none;} 
+
+    html{font-size: 12px;}
 }
 @media all and (max-width:700px){
     .header-box{
@@ -277,4 +259,7 @@ a .ocultar-mostrar{
         align-items: flex-end;
         margin-right: 1rem;
     }
+    .botones{flex-direction: column;}
+
+    .botones .register{ margin-top: 3rem;}
 }

@@ -1,6 +1,5 @@
 *{
     box-sizing: border-box;
-
 }
 body{
     line-height: 1.6;
@@ -9,18 +8,23 @@ body{
 
 
 header{
-    height: 20%;
+    height: 15rem;
     background-color: #035B5B;
     display: flex;
     flex-direction: column;
 }
 
+html{
+    font-size:16px;
+}
+
 .header-options{
-    height: 30%;
+    height: 20%;
     background: white;
     display: flex;
     align-items: center;
     padding-left: 20px;
+    font-size: 1.3rem;
 }
 
 .links, .links-registration{
@@ -69,7 +73,7 @@ header{
     height: 2em;
     min-width: 150px;
     width: 15%;
-    font-size: 20px;
+    font-size: 1rem;
     text-align: center;
 }
 .img-container{
@@ -112,6 +116,8 @@ header{
     display: flex;
     padding-right: 5rem;
     width: 100%;
+    gap: 1rem;
+    padding: 0 4rem 0 0;
 }
 .price{
     margin-left: 35px;
@@ -122,21 +128,25 @@ header{
     float: left;
 }
 .buy-section{
+    flex-grow: 2;
     font-size: 40px;
     font-family: 'Irish Grover', cursive;
     color: white;
-    margin-right: 10px;
-    justify-items: center;
+    margin-right: 1rem;
+    align-items: flex-end;
     z-index: 1;
+    display: flex;
+    flex-direction: column;
 }
 #nike-fashion{
-    margin-left: 165px;
+    /*margin-left: 165px;*/
 }
 #buy-button{
     border-radius: 3rem;
     height: 3em;
     min-width: 100px;
-    width: 80%;
+    width: 100%;
+    max-width: 300px;
     border: none;
     font-size: 20px;
     box-shadow: 8px 10px 10px 1px rgba(0,0,0,0.7);
@@ -146,8 +156,8 @@ header{
 #buy-button::after, #buy-button::before{
     content: "";
     position: absolute;
-    height: 90%;
-    width: 20%;
+    height: 50px;
+    width: 50px;
     border: 0.4rem solid white;
     border-radius: 100%;
     z-index: -1;
@@ -160,8 +170,8 @@ header{
 #buy-button::before{
     top: 0;
     right: -10%;
-    height: 70%;
-    width: 15%;
+    height: 40px;
+    width:40px;
 }
 
 
@@ -183,27 +193,38 @@ header{
     display: flex;
     flex-direction: column;
     width: 21%;
-    height: 350px;
+    height: 30%;
     background: white;
     border-radius: 50px;
     align-items: center;
     margin-bottom: 10px;
     min-width: 300px;
+    max-width: 80%;
     justify-content: center;
 }
 .price-frame{
-    font-size: 45px;
+    font-size: 2rem;
     color: black;
     font-family: 'Irish Grover', cursive;
 }
 .frame img{
-    width:45%;
-    height:45%;
+    width:50%;
+    height:50%;
 }
 h1,h3{
     color: white;
     text-transform: uppercase;
     font-size: 2rem;
+    margin: 0;
+}
+
+.price span, h2{
+    font-size: 3rem;
+}
+
+p{
+    font-size: 2rem;
+    margin: 0;
 }
 h3{
     text-transform: capitalize;
@@ -211,19 +232,18 @@ h3{
 
 .frame h3{
     color: black;
-    font-size: 20px;
+    font-size: 1.5rem;
 }
 
 li a .ocultar{
     display: none;
 }
 
-@media all and (max-width:650px) {
-    li a span{display: none;}
-    li a .ocultar{display: block;} 
+@media screen and (max-width:650px) {
     .teni-information{
         flex-direction: column;
         justify-content: center;
+        padding: 0 2rem 0 0;
     }
     .price,.buy-section{
         margin: 0%;
@@ -231,33 +251,48 @@ li a .ocultar{
     }
     #buy-button{
         margin-left: 20%;
+        flex-grow: 2;
     }
+
+    .buy-section{ flex-direction: row; }
 
     .frame{
-        height: 12rem;
         flex-direction: row;
-        padding: auto;
+        padding: 0;
         width: 60%;
     }
-    .frame h2{
-        font-size: 30px;
-    }
-
+    
     .frame img{
         z-index: 1;
-        width: 70%;
-        height: 80%;
+        width: 50%;
+        height: 100%;
+    }
+
+    .info{
+        padding: 0 1rem 0 1rem;
+    }
+
+    html{
+        font-size:11px;
+    }
+    body{
+       
+        padding: 0 0.1rem;
     }
 }
 
-@media all and (max-width:900px){
+@media all and (max-width:1300px){
     .img-container{
         padding: 0;
     }
     .img-container::after{
         width: 70%;
     }
+    li a span{display: none;}
+    li a .ocultar{display: block;} 
 }
+
+
 
 
 
