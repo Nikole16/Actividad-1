@@ -224,6 +224,9 @@ h1,h3{
 h2{
     font-size: 2rem;
 }
+.price h2{
+    font-size: 3rem;
+}
 p{
     font-size: 2rem;
     margin: 0;
