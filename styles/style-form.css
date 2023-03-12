@@ -40,7 +40,7 @@ h1{
 .logo{
     height: 6.5rem;
     width: 6.5rem;
-    background: url("/img/Logo.png");
+    background: url("../img/Logo.png");
     background-size: cover;
     filter: contrast(1.5);
     border-radius: 50px;
